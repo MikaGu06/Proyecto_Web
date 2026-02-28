@@ -1,0 +1,89 @@
+:root {
+  --azul-principal: #00bcd4;
+  --azul-secundario: #0097a7;
+}
+
+body {
+  background-color: rgb(210, 210, 210);
+}
+
+.mi-navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.mi-navbar.scrolled {
+  background-color: #000 !important;
+}
+
+#home {
+  background: linear-gradient(rgba(13,27,42,0.8), rgba(13,27,42,0.8)),
+              url("img/prueba1.jpg") center/cover no-repeat;
+  color: white;
+}
+
+#home h1 {
+  font-weight: 700;
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-primary {
+  background-color: var(--azul-principal);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--azul-secundario);
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.seccion {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+#fundador h3 {
+  color: #1f3c88; 
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 15px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+  color: white;
+}

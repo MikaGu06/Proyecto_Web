@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>InmoCredit Global</title>
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top mi-navbar">
+			<div class="container">
+
+				<a class="navbar-brand d-flex align-items-center" href="#">
+					<img src="img/Logo.jpeg" alt="InmoCredit Global" height="40" class="me-2">
+					InmoCredit Global
+				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="#quienes">Nosotros</a></li>
+						<li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+						<li class="nav-item"><a class="nav-link" href="#propiedades">Propiedades</a></li>
+						<li class="nav-item"><a class="nav-link" href="#credito">Crédito</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+	<main>
+
+		
+		<section id="home" class="vh-100 d-flex align-items-center text-center">
+			<div class="container">
+				<h1 class="display-4">Tu hogar, tu crédito y tu proyecto en un solo lugar</h1>
+				<p class="lead">Soluciones inmobiliarias integrales en Bolivia</p>
+				<a href="#propiedades" class="btn btn-primary me-2">Ver Propiedades</a>
+				<a href="#credito" class="btn btn-success">Simular Crédito</a>
+			</div>
+		</section>
+
+		
+		<section id="quienes" class="py-5 seccion">
+			<div class="container">
+				<h2 class="text-center mb-4">Quiénes Somos</h2>
+				<p class="text-center">
+					InmoCredit Global integra inmobiliaria, crédito y construcción,
+					brindando acompañamiento completo desde la evaluación hasta la entrega final.
+				</p>
+			</div>
+		</section>
+
+		
+		<section id="servicios" class="py-5 bg-light seccion">
+			<div class="container">
+				<h2 class="text-center mb-4">Servicios Integrales</h2>
+
+				<div class="row">
+					<div class="col-md-4 mb-4">
+						<div class="card h-100 text-center p-3">
+							<h5>Venta de Casas</h5>
+							<p>Comercialización y acompañamiento hasta firma.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4 mb-4">
+						<div class="card h-100 text-center p-3">
+							<h5>Gestión Crediticia</h5>
+							<p>Evaluación y gestión bancaria completa.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4 mb-4">
+						<div class="card h-100 text-center p-3">
+							<h5>Construcción</h5>
+							<p>Proyectos propios y construcción con crédito.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		
+		<section id="propiedades" class="py-5 seccion">
+			<div class="container">
+				<h2 class="text-center mb-4">Propiedades Destacadas</h2>
+
+				<div class="row mb-4">
+					<div class="col-md-4 mx-auto">
+						<select id="filtroTipo" class="form-select">
+							<option value="Todos">Todos</option>
+							<option value="Casa">Casa</option>
+							<option value="Terreno">Terreno</option>
+							<option value="Departamento">Departamento</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row" id="lista-propiedades"></div>
+			</div>
+		</section>
+
+		
+		<section id="credito" class="py-5 bg-light seccion">
+			<div class="container">
+				<h2 class="text-center mb-4">Simulador de Crédito</h2>
+
+				<div class="row justify-content-center">
+					<div class="col-md-6">
+						<input type="number" id="monto" class="form-control mb-3" placeholder="Monto solicitado">
+						<input type="number" id="tasa" class="form-control mb-3" placeholder="Tasa de interés (%)">
+						<input type="number" id="plazo" class="form-control mb-3" placeholder="Plazo (meses)">
+						<button class="btn btn-success w-100" onclick="calcular()">Calcular</button>
+						<h5 class="mt-3 text-center" id="resultado"></h5>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+        
+        <section id="fundador" class="py-5 bg-light">
+        <div class="container">
+
+            <div class="text-center mb-5">
+            <h2 class="fw-bold">Nuestro Fundador</h2>
+            <p class="text-muted">Liderazgo, experiencia y visión estratégica</p>
+            </div>
+
+            <div class="row align-items-center">
+
+            
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="img/ricardo.jpeg" alt="Ricardo Erwin Urquiza"
+                    class="img-fluid rounded shadow">
+            </div>
+
+            
+            <div class="col-md-8">
+                <h3 class="fw-bold">Ricardo Erwin Urquiza</h3>
+                <h5 class="text-primary">Abogado | Analista Comercial | Jefe Administrativo</h5>
+                <p class="text-muted">Santa Cruz, Bolivia</p>
+
+                <p>
+                Profesional con formación en Derecho y sólida experiencia en gestión administrativa,
+                liderazgo comercial y desarrollo de proyectos inmobiliarios. Especializado en dirección
+                de equipos, estrategias de ventas, negociación y planificación estratégica.
+                </p>
+
+                <p>
+                Actualmente se desempeña como <strong>Jefe Administrativo de InmoCredit Global</strong>,
+                coordinando la gestión integral de la empresa, supervisando procesos comerciales
+                e inmobiliarios y estructurando propuestas financieras para clientes.
+                </p>
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h6 class="fw-bold">Formación Académica</h6>
+                        <ul>
+                        <li>Licenciatura en Derecho — Universidad Domingo Sabio</li>
+                        <li>Analista Comercial</li>
+                        <li>Bachiller en Humanidades</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h6 class="fw-bold">Experiencia Profesional</h6>
+                        <ul>
+                        <li>Jefe Administrativo — InmoCredit Global (2023 - Actualidad)</li>
+                        <li>Jefe de Ventas — Truper (2018 - 2022)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                <h6 class="fw-bold">Especializaciones</h6>
+                <p>
+                    Ventas y negociación estratégica • Marketing y posicionamiento de marca •
+                    Planificación y evaluación de proyectos • Gestión comercial e inmobiliaria
+                </p>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        </section>
+
+		
+		<section id="contacto" class="py-5 seccion">
+			<div class="container">
+				<h2 class="text-center mb-4">Contáctanos</h2>
+
+				<div class="row">
+					<div class="col-md-6">
+						<form id="formContacto">
+							<input type="text" class="form-control mb-3" placeholder="Nombre" required>
+							<input type="email" class="form-control mb-3" placeholder="Correo" required>
+							<textarea class="form-control mb-3" rows="4" placeholder="Mensaje"></textarea>
+							<button class="btn btn-primary w-100">Enviar</button>
+						</form>
+					</div>
+
+					<div class="col-md-6">
+						<p><strong>Teléfono:</strong> +591 65848568</p>
+						<p><strong>Email:</strong> contacto@inmocredit.com</p>
+						<p><strong>Ubicación:</strong> Santa Cruz, Bolivia</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="bg-dark text-white text-center py-3">
+		© 2026 InmoCredit Global - Todos los derechos reservados
+	</footer>
+
+	
+	<div class="modal fade" id="modalPropiedad" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-body" id="contenidoModal"></div>
+			</div>
+		</div>
+	</div>
+
+	
+	<a href="https://wa.me/65848568" class="btn-whatsapp" target="_blank">💬</a>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
